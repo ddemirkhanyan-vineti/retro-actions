@@ -1,0 +1,47 @@
+{
+  "name": "retro-actions",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Fun Retro Actions",
+  "scripts": {
+    "start": "webpack --config webpack.dev.js && foreman start -f Procfile.dev"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-react": "^7.0.0",
+    "assets-webpack-plugin": "^3.4.0",
+    "autoprefixer": "^6.7.7",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-object-assign": "^6.5.0",
+    "babel-plugin-transform-react-display-name": "^6.5.0",
+    "babel-polyfill": "^6.20.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^3.2.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.5.2",
+    "rc-progress": "^2.1.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.5.4",
+    "react-fontawesome": "^1.5.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.13.2",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "webpack-livereload-plugin": "^1.0.0",
+    "webpack-md5-hash": "0.0.5",
+    "webpack-merge": "^4.1.1",
+    "webpack-stream": "^3.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.20.0",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
