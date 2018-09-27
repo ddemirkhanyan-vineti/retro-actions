@@ -6,6 +6,7 @@ import Footer from './Footer';
 import AddTodo from '../containers/AddTodo';
 
 import RetroContainer from '../containers/RetroContainer';
+import ItemDetails from '../containers/ItemDetails';
 import VisibleTodoList from '../containers/VisibleTodoList';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -19,6 +20,7 @@ const App = () => (
     <div className="columns">
       <Sidebar />
       <RetroContainer />
+      <ItemDetails />
     </div>
   </div>
 )
