@@ -31,8 +31,18 @@ group :development, :test do
   gem 'mailcatcher'
   gem 'pry'
   gem 'rails-erd'
-  gem 'rspec-rails', '~> 3.5.0'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'rspec_junit_formatter', '~> 0.2.3'
   gem 'spring'
+  gem 'faker'
+end
+group :test do
+  gem 'database_cleaner'
+  gem 'rspec-html-matchers'
+  gem 'shoulda-callback-matchers'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
