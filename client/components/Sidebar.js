@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Sidebar = () => (
+const Sidebar = ({ addRetro }) => (
   <aside className="column is-2 aside hero is-fullheight">
     <div>
       <div className="compose has-text-centered">
-        <a className="button is-danger is-block is-bold">
+        <a className="button is-danger is-block is-bold" onClick={() => addRetro()}>
           <span className="compose">Add Retro</span>
         </a>
       </div>

@@ -15,6 +15,10 @@ export const toggleTodo = id => ({
   id
 })
 
+export const addRetro = () => ({
+  type: 'ADD_RETRO'
+})
+
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',

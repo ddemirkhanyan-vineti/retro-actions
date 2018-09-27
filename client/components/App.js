@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addRetro } from '../actions';
 
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
@@ -25,4 +27,10 @@ const App = () => (
   </div>
 )
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  addRetro: () => dispatch(addRetro())
+})
+
+export default connect(
+  mapDispatchToProps
+)(App)
