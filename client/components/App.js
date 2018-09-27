@@ -8,6 +8,11 @@ import AddTodo from '../containers/AddTodo';
 import RetroContainer from '../containers/RetroContainer';
 import VisibleTodoList from '../containers/VisibleTodoList';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faStar, faListUl, faUsers } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faStar, faListUl, faUsers);
+
 const App = () => (
   <div>
     <Navbar />
