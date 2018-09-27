@@ -2,9 +2,11 @@ import React from 'react';
 
 const Navbar = () => (
   <nav className="navbar has-shadow">
-    <div className="container">
+    <div className="container is-fluid">
       <div className="navbar-brand">
-        <a className="navbar-item" href="../">Retro Actions</a>
+        <a className="navbar-item" href="../">
+          <img src="logo.png" alt="Retro Actions"/>
+        </a>
         <div className="navbar-burger burger" data-target="navMenu">
           <span></span>
           <span></span>

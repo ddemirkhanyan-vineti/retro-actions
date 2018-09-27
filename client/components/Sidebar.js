@@ -5,7 +5,9 @@ const Sidebar = () => (
   <aside className="column is-2 aside hero is-fullheight">
     <div>
       <div className="compose has-text-centered">
-        <a className="button is-danger is-block is-bold"><span className="compose">Add Retro</span></a>
+        <a className="button is-danger is-block is-bold">
+          <span className="compose">Add Retro</span>
+        </a>
       </div>
       <div className="main">
         <a href="#" className="item">

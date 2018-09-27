@@ -20,9 +20,6 @@ const App = () => (
       <Sidebar />
       <RetroContainer />
     </div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
   </div>
 )
 
