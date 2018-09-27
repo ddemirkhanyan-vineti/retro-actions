@@ -9,7 +9,8 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './public',
-    port: 3001
+    port: 3001,
+    historyApiFallback: true
   },
   plugins: [
     new MiniCssExtractPlugin({
