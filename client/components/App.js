@@ -11,13 +11,13 @@ import { faStar, faListUl, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faStar, faListUl, faUsers);
 
-const App = () => (
+const App = ({ match: { params } }) => (
   <div>
     <Navbar />
     <div className="columns">
       <Sidebar />
-      <RetroContainer />
-      <ItemDetails />
+      <RetroContainer filter={params.filter}/>
+      <ItemDetails filter={params.filter}/>
     </div>
   </div>
 )
