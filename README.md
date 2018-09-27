@@ -1,4 +1,4 @@
-# Fun Actions
+# Retro Actions
 
 An open platform to write down, manage and complete action items from retros.
 
@@ -9,14 +9,14 @@ An open platform to write down, manage and complete action items from retros.
 
 ## Introduction
 
-FunActions is an open platform for recording actions items from a retro followin up on them. It provides an integration with Slack to let people easily track their action items and mark done upon completion.
+Retro Actions is an open platform for recording actions items from a retro followin up on them. It provides an integration with Slack to let people easily track their action items and mark done upon completion.
 
 ## Running the application
 
-1. Install Yarn
-2. Run ```yarn install```
-2. Run ```yarn start``` (inside the project folder)
-3. Point your browser to [http://localhost:3000/](http://localhost:3000/)
+1. ```bundle```
+2. ```yarn install```
+3. Run ```foreman start -f Procfile.dev``` (inside the project folder)
+4. Point your browser to [http://localhost:3001/](http://localhost:3001/)
 
 ## Running the tests
 

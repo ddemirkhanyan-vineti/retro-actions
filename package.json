@@ -4,7 +4,7 @@
   "private": true,
   "description": "Fun Retro Actions",
   "scripts": {
-    "start": "webpack --config webpack.dev.js && foreman start -f Procfile.dev"
+    "start": "foreman start -f Procfile.dev"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-0",
