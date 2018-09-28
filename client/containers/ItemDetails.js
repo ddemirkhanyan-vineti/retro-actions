@@ -44,7 +44,23 @@ class ItemDetails extends React.Component {
     const retroAdd = (
       <div className="column is-6 messages hero is-fullheight">
         <InputWithSelect
-          label="Action Item"
+          label="Item 1"
+          placeholder="Please add an action item"
+          value={actionOwner}
+          options={options}
+          onChange={(value) => this.onChange(value)}
+          onSelect={(value) => this.onSelect(value)}
+        />
+        <InputWithSelect
+          label="Item 2"
+          placeholder="Please add an action item"
+          value={actionOwner}
+          options={options}
+          onChange={(value) => this.onChange(value)}
+          onSelect={(value) => this.onSelect(value)}
+        />
+        <InputWithSelect
+          label="Item 3"
           placeholder="Please add an action item"
           value={actionOwner}
           options={options}
