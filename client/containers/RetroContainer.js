@@ -3,6 +3,7 @@ import React from 'react';
 import Input from '../components/base/input';
 import Select from '../components/base/select';
 import RetroItem from '../components/RetroItem';
+import RetroDatePicker from '../components/DatePicker';
 
 const OPTIONS = [
   {
@@ -15,7 +16,7 @@ const OPTIONS = [
     id: 3, value: 'Tigran Astvatsatryan'
   }
 ];
-class RetroContainter extends React.Component {
+class RetroContainer extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -29,8 +30,11 @@ class RetroContainter extends React.Component {
   }
 
   onChange(value) {
-    console.log(value);
     this.setState({title: value})
+  }
+
+  onDateChange(date) {
+    this.setState({startDate: date});
     console.log(this.state);
   }
 
@@ -51,6 +55,7 @@ class RetroContainter extends React.Component {
     const retroAdd = (
       <div id="message-feed" className="column is-4 messages hero is-fullheight">
         <Input label="Title" type="text" placeholder="Please enter retro title" onChange={(value) => {this.onChange(value)}}/>
+        <RetroDatePicker label="Date" onChange={(date) => this.onDateChange(date)} />
         <Select label="Master" value={master} options={OPTIONS} onSelect={(value) => this.onSelect(value)} />
       </div>
     )
@@ -59,4 +64,4 @@ class RetroContainter extends React.Component {
   }
 }
 
-export default RetroContainter;
+export default RetroContainer;
