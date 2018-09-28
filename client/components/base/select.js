@@ -24,7 +24,7 @@ class Select extends React.Component {
 
     return (
       <div className="field is-horizontal">
-        <div className="field-label is-normal">
+        <div className="column is-1 field-label is-normal">
           <label className="label">{label}</label>
         </div>
         <div className="field-body">
@@ -37,7 +37,7 @@ class Select extends React.Component {
                 </span>
               </button>
             </div>
-            <div className="dropdown-menu" id="dropdown-menu" role="menu">
+            <div className="dropdown-menu">
               <div className="dropdown-content">
                 {
                   options.map(({id, value}) => {

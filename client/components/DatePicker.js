@@ -22,24 +22,24 @@ class RetroDatePicker extends React.Component {
 
     return (
       <div className="field is-horizontal">
-      <div className="field-label is-normal">
-        <label className="label">{label}</label>
-      </div>
-      <div className="field-body">
-        <div className="field">
-          <ReactPicker
-            selected={startDate}
-            onChange={onDateChange}
-            showTimeSelect
-            minDate={moment()}
-            minTime={moment()}
-            maxTime={moment().hours(23).minutes(30)}
-            dateFormat="LLL"
-            placeholderText="Start Date" 
-          />
+        <div className="column is-1 field-label is-normal">
+          <label className="label">{label}</label>
+        </div>
+        <div className="field-body">
+          <div className="field">
+            <ReactPicker
+              selected={startDate}
+              onChange={onDateChange}
+              showTimeSelect
+              minDate={moment()}
+              minTime={moment()}
+              maxTime={moment().hours(23).minutes(30)}
+              dateFormat="LLL"
+              placeholderText="Start Date" 
+            />
+          </div>
         </div>
       </div>
-    </div>
     );
   }
 }

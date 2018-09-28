@@ -11,13 +11,25 @@ import { faStar, faListUl, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faStar, faListUl, faUsers);
 
+const OPTIONS = [
+  {
+    id: 1, value: 'Konstantin Sargsyan'
+  },
+  {
+    id: 2, value: 'Nare Zakaryan'
+  },
+  {
+    id: 3, value: 'Tigran Astvatsatryan'
+  }
+];
+
 const App = ({ match: { params } }) => (
   <div>
     <Navbar />
     <div className="columns">
       <Sidebar />
-      <RetroContainer filter={params.filter}/>
-      <ItemDetails filter={params.filter}/>
+      <RetroContainer filter={params.filter} options={OPTIONS}/>
+      <ItemDetails filter={params.filter} options={OPTIONS}/>
     </div>
   </div>
 )
