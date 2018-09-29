@@ -19,6 +19,8 @@ class RetroDatePicker extends React.Component {
     const onDateChange = (dateTime) => {
       this.setState({startDate: dateTime});
     }
+    const availableMinTime = startDate.format('YYYYMMDD') !== moment().format('YYYYMMDD') ? startDate.hours(0).minutes(0) : moment();
+    const availableMaxTime = moment().hours(23).minutes(30);
 
     return (
       <div className="field is-horizontal">
@@ -32,8 +34,8 @@ class RetroDatePicker extends React.Component {
               onChange={onDateChange}
               showTimeSelect
               minDate={moment()}
-              minTime={moment()}
-              maxTime={moment().hours(23).minutes(30)}
+              minTime={availableMinTime}
+              maxTime={availableMaxTime}
               dateFormat="LLL"
               placeholderText="Start Date" 
             />
