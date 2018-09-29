@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class InputWithSelect extends React.Component {
   constructor() {
@@ -18,8 +19,12 @@ class InputWithSelect extends React.Component {
     this.props.onSelect(value);
   }
 
+  onChange(value) {
+    this.props.onChange(value);
+  }
+
   render() {
-    const {label, placeholder, options, value} = this.props;
+    const {label, placeholder, options, inputValue, selectedValue} = this.props;
     const {active} = this.state;
 
     return (
@@ -30,16 +35,22 @@ class InputWithSelect extends React.Component {
         <div className="field-body">
           <div className="field">
             <p className="control">
-              <input className="input" type="text" placeholder={placeholder}/>
+              <input
+                className="input"
+                type="text"
+                value={inputValue}
+                placeholder={placeholder}
+                onChange={(e) => this.onChange(e.target.value)}
+              />
             </p>
           </div>
         </div>
         <div className={active ? 'dropdown is-active is-2 field-body' : 'dropdown is-2 field-body'}>
           <div className="dropdown-trigger">
             <button className="button" onClick={() => this.toggleDropdown()}>
-              <span>{value}</span>
+              <span>{selectedValue}</span>
               <span className="icon is-small">
-                <i className="fas fa-angle-down" aria-hidden="true"></i>
+                <FontAwesomeIcon icon="angle-down"/>
               </span>
             </button>
           </div>

@@ -3,13 +3,14 @@ import React from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 
-import RetroContainer from '../containers/RetroContainer';
-import ItemDetails from '../containers/ItemDetails';
+import RetroListContainer from '../containers/RetroListContainer';
+import ItemListContainer from '../containers/ItemListContainer';
+import RetroAddContainer from '../containers/RetroAddContainer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faStar, faListUl, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faListUl, faUsers, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faStar, faListUl, faUsers);
+library.add(faStar, faListUl, faUsers, faAngleDown);
 
 const OPTIONS = [
   {
@@ -23,15 +24,32 @@ const OPTIONS = [
   }
 ];
 
-const App = ({ match: { params } }) => (
-  <div>
-    <Navbar />
-    <div className="columns">
-      <Sidebar />
-      <RetroContainer filter={params.filter} options={OPTIONS}/>
-      <ItemDetails filter={params.filter} options={OPTIONS}/>
-    </div>
-  </div>
-)
+class App extends React.Component {
+  render() {
+    const {match} = this.props;
+    let content;
+
+    if(match.params.filter === 'add-retro') {
+      content = <RetroAddContainer options={OPTIONS}/>
+    } else {
+      content = (
+        <div className="columns">
+          <RetroListContainer options={OPTIONS}/>
+          <ItemListContainer options={OPTIONS}/>
+        </div>
+      )
+    }
+
+    return (
+      <div>
+        <Navbar />
+        <div className="columns">
+          <Sidebar />
+          { content }
+        </div>
+      </div>
+    );
+  }
+}
 
 export default App;

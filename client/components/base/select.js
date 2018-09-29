@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Select extends React.Component {
   constructor() {
@@ -33,7 +34,7 @@ class Select extends React.Component {
               <button className="button" onClick={() => this.toggleDropdown()}>
                 <span>{value}</span>
                 <span className="icon is-small">
-                  <i className="fas fa-angle-down" aria-hidden="true"></i>
+                  <FontAwesomeIcon icon="angle-down"/>
                 </span>
               </button>
             </div>

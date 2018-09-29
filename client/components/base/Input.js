@@ -8,7 +8,13 @@ const Input = ({label, type, value, placeholder, onChange}) => (
     <div className="field-body">
       <div className="field">
         <p className="control">
-          <input className="input" value={value} type={type} placeholder={placeholder} onChange={(e) => onChange(e.target.value)}/>
+          <input
+            className="input"
+            value={value}
+            type={type}
+            placeholder={placeholder}
+            onChange={(e) => onChange(e.target.value)}
+          />
         </p>
       </div>
     </div>
