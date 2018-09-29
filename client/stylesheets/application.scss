@@ -30,5 +30,9 @@ html,body {
   vertical-align: top;
 }
 
+.create-retro {
+  float: right;
+}
+
 @import './components/navbar';
 @import './components/sidebar';
