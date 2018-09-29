@@ -69,14 +69,13 @@ class RetroAddContainer extends React.Component {
           <Input value={title} label="Title" type="text" placeholder="Please enter retro title" onChange={(value) => {this.onTitleChange(value)}}/>
           <RetroDatePicker label="Date" onChange={(date) => this.onDateChange(date)} />
           <Select label="Master" value={master} options={options} onSelect={(value) => this.onMasterSelect(value)} />
+          <div className="control">
+            <button className="button is-primary">Create Retro</button>
+          </div>
         </div>
 
         <div className="column is-12 messages hero is-fullheight">
           { inputList }
-
-          <div className="control">
-            <button className="button is-primary">Create Retro</button>
-          </div>
         </div>
       </div>
     );

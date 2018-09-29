@@ -4,7 +4,6 @@ import ItemContent from '../components/ItemContent';
 
 class ItemListContainer extends React.Component {
   render() {
-    console.log('list container');
     return (
       <div className="column is-6 message hero is-fullheight">
         <div className="box message-preview">
