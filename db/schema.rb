@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180927101612) do
+ActiveRecord::Schema.define(version: 20180928124759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "action_items", force: :cascade do |t|
-    t.string "url"
     t.integer "retro_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "status", default: 0
+    t.string "description"
   end
 
   create_table "action_items_users", id: false, force: :cascade do |t|

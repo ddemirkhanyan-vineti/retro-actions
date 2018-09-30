@@ -11,7 +11,6 @@ class InitialSchema < ActiveRecord::Migration[5.1]
 
     create_table :retros do  |t|
       t.string :name
-
       t.datetime :date
       t.datetime :created_at
       t.datetime :updated_at

@@ -36,9 +36,11 @@ group :development, :test do
   gem 'rspec_junit_formatter', '~> 0.2.3'
   gem 'spring'
   gem 'faker'
+  gem 'factory_bot_rails'
 end
 group :test do
   gem 'database_cleaner'
+
   gem 'rspec-html-matchers'
   gem 'shoulda-callback-matchers'
   gem 'shoulda-matchers'
