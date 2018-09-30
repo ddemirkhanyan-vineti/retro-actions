@@ -17,7 +17,7 @@ gem 'awesome_print'
 gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
-
+gem 'pundit'
 group :development do
   gem 'listen'
   gem 'parity'

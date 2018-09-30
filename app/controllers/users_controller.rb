@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  protect_from_forgery with: :exception
 
   def index
     users = User.all
@@ -7,8 +6,18 @@ class UsersController < ApplicationController
   end
 
   def show
-    users = User.find(params[:id])
-    render json: users
+    user = User.find(params[:id])
+    render json: user
+  end
+
+  def create
+    user = User.create!(user_create_params)
+    render json: user
+  end
+
+  def user_create_params
+    params.require(%i[first_name last_name email])
+    params.permit(:first_name, :last_name, :email)
   end
 
 end
