@@ -5,22 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-def create_user(name)
-  User.create!({ first_name: name, last_name: name, email: "#{name}@old.friend" })
+
+user_list = [
+  ['Konstantin', 'Sargsyan', 'konstantin.sargsyan@vineti.com'],
+  ['Tigran', 'Astvatsatryan', 'tigran.astvatsatryan@vineti.com'],
+  ['Nare', 'Zakaryan', 'nare.zakaryan@vineti.com']
+]
+
+user_list.each do |first_name, last_name, email|
+  User.create(first_name: first_name, last_name: last_name, email: email)
 end
 
-retro_master = create_user('master')
+
+retro_master = User.first
 
 retro = Retro.create!({ name: 'Retro1', date: DateTime.now, user: retro_master })
 
-user_1 = create_user('user_1')
-user_2 = create_user('user_2')
-user_3 = create_user('user_3')
-user_4 = create_user('user_4')
-user_5 = create_user('user_5')
-user_6 = create_user('user_6')
-user_7 = create_user('user_7')
-user_8 = create_user('user_8')
 
 users = User.all
 10.times do |i|

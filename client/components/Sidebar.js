@@ -1,33 +1,34 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavLink } from 'react-router-dom'
 
-const Sidebar = () => (
+const Sidebar = ({ addRetro }) => (
   <aside className="column is-2 aside hero is-fullheight">
     <div>
       <div className="compose has-text-centered">
-        <a className="button is-danger is-block is-bold">
+        <NavLink to="add-retro" className="button is-danger is-block is-bold">
           <span className="compose">Add Retro</span>
-        </a>
+        </NavLink>
       </div>
       <div className="main">
-        <a href="#" className="item">
+        <NavLink to="" className="item">
           <span className="icon">
             <FontAwesomeIcon icon="list-ul"/>
           </span>
           <span className="name">Retro List</span>
-        </a>
-        <a href="#" className="item active">
+        </NavLink>
+        <NavLink to="items" className="item">
           <span className="icon">
             <FontAwesomeIcon icon="star"/>
           </span>
           <span className="name">My Action Items</span>
-        </a>
-        <a href="#" className="item">
+        </NavLink>
+        <NavLink to="users" className="item">
           <span className="icon">
             <FontAwesomeIcon icon="users"/>
           </span>
           <span className="name">Users Management</span>
-        </a>
+        </NavLink>
       </div>
     </div>
   </aside>
