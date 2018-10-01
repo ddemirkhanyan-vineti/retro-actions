@@ -6,7 +6,10 @@ import Sidebar from './Sidebar';
 import RetroListContainer from '../containers/RetroListContainer';
 import ItemListContainer from '../containers/ItemListContainer';
 import RetroAddContainer from '../containers/RetroAddContainer';
+import dispatcherHandlers from '../dispatcher_handlers';
 
+import {useStore, Actions} from 'p-flux';
+import store, {Provider} from '../store';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faStar, faListUl, faUsers, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,6 +28,11 @@ const OPTIONS = [
 ];
 
 class App extends React.Component {
+
+  constructor(props, context) {
+    super(props, context);
+  }
+
   render() {
     const {match} = this.props;
     let content;
@@ -52,4 +60,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default useStore(App, {
+  store,
+  dispatcherHandlers
+});
