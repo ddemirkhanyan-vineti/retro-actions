@@ -12,6 +12,7 @@ import {useStore, Actions} from 'p-flux';
 import store, {Provider} from '../store';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faStar, faListUl, faUsers, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import {getRetros} from '../dispatchers/retros_dispatcher';
 
 library.add(faStar, faListUl, faUsers, faAngleDown);
 
@@ -30,6 +31,7 @@ const OPTIONS = [
 class App extends React.Component {
 
   constructor(props, context) {
+    getRetros()
     super(props, context);
   }
 

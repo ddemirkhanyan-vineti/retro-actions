@@ -17,5 +17,11 @@ module RetroActions
     logger = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: %i(get post patch delete options), expose: %w(access-token expiry token-type uid client)
+      end
+    end
   end
 end

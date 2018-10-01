@@ -2,7 +2,7 @@ import 'isomorphic-fetch';
 import _ from 'lodash';
 import qs from 'qs';
 
-const apiUrl = 'http://localhost:3001';
+const apiUrl = 'http://localhost:3000';
 
 export function getQueryString(params) {
   return qs.stringify(params, {indices: false, arrayFormat: 'brackets'});
@@ -26,7 +26,7 @@ function fetchData(url, {headers, ...options} = {}) {
     url = `${url}?${getQueryString(options.params)}`;
   }
 
-  options = {credentials: 'same-origin', headers: {...acceptHeaders, ...authHeadersFromCookies(), ...headers}, ...options};
+  options = {credentials: 'same-origin', headers: {...headers}, ...options};
   return fetch(`${apiUrl}${url}`, options)
     .then(checkStatus);
 }

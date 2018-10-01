@@ -18,6 +18,7 @@ gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
 gem 'pundit'
+gem 'rack-cors', require: 'rack/cors'
 group :development do
   gem 'listen'
   gem 'parity'
