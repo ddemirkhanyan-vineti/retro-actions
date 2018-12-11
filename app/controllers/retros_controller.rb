@@ -1,5 +1,4 @@
 class RetrosController < ApplicationController
-
   def index
     retros = Retro.all
     render json: retros , each_serializer: RetroListSerializer
@@ -21,6 +20,7 @@ class RetrosController < ApplicationController
     }
     render json: retro
   end
+  
   def action_item_params(item)
     item.require(%i[description])
     item.permit(:description)

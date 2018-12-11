@@ -14,9 +14,7 @@ describe RetrosController, type: :controller do
       it 'returns list of retros' do
         get :index
         body = JSON.parse(response.body)
-        ap response.body
         expect(body.length).to eq 2
-
       end
     end
   end
