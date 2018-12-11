@@ -19,6 +19,10 @@ gem 'devise_token_auth'
 gem 'omniauth'
 gem 'pundit'
 gem 'rack-cors', require: 'rack/cors'
+
+gem 'trailblazer-rails', '~> 2.1.0'
+gem 'dry-validation', "0.11.1"
+
 group :development do
   gem 'listen'
   gem 'parity'
